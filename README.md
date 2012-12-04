@@ -32,7 +32,7 @@ So now, only the following need to be overrided:
     - (UIViewController *)performWithActivityItems:(NSArray *)activityItems;
 
 
-**Silent activity sample** [Source](https://github.com/marianoabdala/ZYActivity/blob/master/SampleProject/SampleProject/ZYMySilentActivity.m)
+**Silent activity sample** - [source](https://github.com/marianoabdala/ZYActivity/blob/master/SampleProject/SampleProject/ZYMySilentActivity.m)
 
     - (UIViewController *)performWithActivityItems:(NSArray *)activityItems {
     
@@ -54,7 +54,7 @@ So now, only the following need to be overrided:
     }
 
 
-**Visible activity sample** [Source](https://github.com/marianoabdala/ZYActivity/blob/master/SampleProject/SampleProject/ZYMyActivity.m)
+**Visible activity sample** - [source](https://github.com/marianoabdala/ZYActivity/blob/master/SampleProject/SampleProject/ZYMyActivity.m)
 
     - (UIViewController *)performWithActivityItems:(NSArray *)activityItems {
     
