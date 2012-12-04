@@ -20,12 +20,13 @@ Plus one and just one of the following:
 
   
   
+
   
 **Extending the ZYActivity**
 
 Extending the UIActivity isn't the most convenient way. By inheriting from this class you'll find that activityType is taken care of and that the storing of the activity items and the execution of the action happens in one step.
 
-Also, instead of having to override performActivity if you don't want to show a UIViewController, can just return nil on the unified method performWithActivityItems:.
+Also, instead of having to override performActivity if you don't want to show a UIViewController, you can simply return nil on the unified method performWithActivityItems:.
 
 So now, only the following need to be override:
 
@@ -36,9 +37,6 @@ So now, only the following need to be override:
 
 Check the sample project to see how.
   
-  
-
-
 License
 =======
 
