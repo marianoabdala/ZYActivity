@@ -19,7 +19,8 @@ Plus one and just one of the following:
     - (void)performActivity;
 
   
-
+  
+  
 **Extending the ZYActivity**
 
 Extending the UIActivity isn't the most convenient way. By inheriting from this class you'll find that activityType is taken care of and that the storing of the activity items and the execution of the action happens in one step.
@@ -34,6 +35,8 @@ So now, only the following need to be override:
     - (UIViewController *)performWithActivityItems:(NSArray *)activityItems;
 
 Check the sample project to see how.
+  
+  
 
 
 License
