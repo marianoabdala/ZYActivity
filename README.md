@@ -17,25 +17,57 @@ Plus one and just one of the following:
 
     - (UIViewController *)activityViewController;
     - (void)performActivity;
-
-  
-  
-
   
 **Extending the ZYActivity**
 
-Extending the UIActivity isn't the most convenient way. By inheriting from this class you'll find that activityType is taken care of and that the storing of the activity items and the execution of the action happens in one step.
+Extending the UIActivity isn't the most convenient way. By inheriting from this class you'll find that activityType is taken care of and that the storing of the activity items and the execution of the action happens in one step, so instead of prepareWithActivityItems:, performActivity and activityViewController you now only have performWithActivityItems:.
 
-Also, instead of having to override performActivity if you don't want to show a UIViewController, you can simply return nil on the unified method performWithActivityItems:.
+If you don't want to show a UIViewController, you can simply return nil on performWithActivityItems:.
 
-So now, only the following need to be override:
+So now, only the following need to be overrided:
 
     - (NSString *)activityTitle;
     - (UIImage *)activityImage;
     - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems;
     - (UIViewController *)performWithActivityItems:(NSArray *)activityItems;
 
-Check the sample project to see how.
+
+**Silent activity sample** [Source](https://github.com/marianoabdala/ZYActivity/blob/master/SampleProject/SampleProject/ZYMySilentActivity.m)
+
+    - (UIViewController *)performWithActivityItems:(NSArray *)activityItems {
+    
+        NSOperationQueue *backgroundQueue =
+        [[NSOperationQueue alloc] init];
+    
+        [backgroundQueue addOperationWithBlock:^{
+        
+            NSLog(@"My activity has begun!", nil);
+        
+            sleep(5);
+        
+            NSLog(@"My activity has finished!", nil);
+        
+            [self activityDidFinish:YES];
+        }];
+    
+        return nil;
+    }
+
+
+**Visible activity sample** [Source](https://github.com/marianoabdala/ZYActivity/blob/master/SampleProject/SampleProject/ZYMyActivity.m)
+
+    - (UIViewController *)performWithActivityItems:(NSArray *)activityItems {
+    
+        ZYHelloViewController *helloViewController =
+        [[ZYHelloViewController alloc] initWithNibName:@"ZYHelloViewController"
+                                                bundle:nil];
+        
+        helloViewController.activity = self;
+    
+        return helloViewController;
+    }
+
+
   
 License
 =======
