@@ -1,7 +1,7 @@
 ZYActivity
 ===================
 
-# Extending the regular UIActivity
+**Extending the regular UIActivity**
 
 iOS 6 introduced the UIActivity, as an inheritable class.
 
@@ -19,7 +19,7 @@ Plus one and just one of the following:
     - (void)performActivity;
 
 
-# Extending the the easiest ZYActivity
+**Extending the the easiest ZYActivity**
 
 Extending the UIActivity isn't the most convenient way. By inheriting from this class you'll find that activityType is taken care of and that the storing of the activity items and the execution of the action happens in one step.
 
