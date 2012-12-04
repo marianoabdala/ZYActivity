@@ -2,21 +2,21 @@ ZYActivity
 ===================
 
 iOS 6 introduced the UIActivity, as an inheritable class. In order to create custom activities programmers would have to override the following:
-	- (NSString *)activityType;
-	- (NSString *)activityTitle;
-	- (UIImage *)activityImage;
-	- (BOOL)canPerformWithActivityItems:(NSArray *)activityItems;
-	- (void)prepareWithActivityItems:(NSArray *)activityItems;
+    - (NSString *)activityType;
+    - (NSString *)activityTitle;
+    - (UIImage *)activityImage;
+    - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems;
+    - (void)prepareWithActivityItems:(NSArray *)activityItems;
 
 Plus one and just one of the following:
-	- (UIViewController *)activityViewController;
-	- (void)performActivity;
+    - (UIViewController *)activityViewController;
+    - (void)performActivity;
 
 Since this is a strange implementation, I decided to make one that was a bit friendlier to the user, having only to override the following:
-	- (NSString *)activityTitle;
-	- (UIImage *)activityImage;
-	- (BOOL)canPerformWithActivityItems:(NSArray *)activityItems;
-	- (UIViewController *)performWithActivityItems:(NSArray *)activityItems;
+    - (NSString *)activityTitle;
+    - (UIImage *)activityImage;
+    - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems;
+    - (UIViewController *)performWithActivityItems:(NSArray *)activityItems;
 
 
 License
