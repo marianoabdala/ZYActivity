@@ -1,6 +1,8 @@
 ZYActivity
 ===================
 
+# Extending the regular UIActivity
+
 iOS 6 introduced the UIActivity, as an inheritable class.
 
 In order to create custom activities programmers would have to override the following:
@@ -17,7 +19,9 @@ Plus one and just one of the following:
     - (void)performActivity;
 
 
-That's not the most convenient implementation. By inheriting from this class you'll find that activityType is taken care of and that the storing of the activity items and the execution of the action happens in one step.
+# Extending the the easiest ZYActivity
+
+Extending the UIActivity isn't the most convenient way. By inheriting from this class you'll find that activityType is taken care of and that the storing of the activity items and the execution of the action happens in one step.
 
 Also, instead of having to override performActivity if you don't want to show a UIViewController, can just return nil on the unified method performWithActivityItems:.
 
