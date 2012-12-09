@@ -43,7 +43,7 @@ So now, only the following need to be overrided:
         
             NSLog(@"My activity has begun!", nil);
         
-            sleep(5);
+            sleep(3);
         
             NSLog(@"My activity has finished!", nil);
         
@@ -58,13 +58,16 @@ So now, only the following need to be overrided:
 
     - (UIViewController *)performWithActivityItems:(NSArray *)activityItems {
     
-        ZYHelloViewController *helloViewController =
-        [[ZYHelloViewController alloc] initWithNibName:@"ZYHelloViewController"
-                                                bundle:nil];
+        if (self.helloViewController == nil) {
         
-        helloViewController.activity = self;
-    
-        return helloViewController;
+            self.helloViewController =
+            [[ZYHelloViewController alloc] initWithNibName:@"ZYHelloViewController"
+                                                    bundle:nil];
+        
+            self.helloViewController.activity = self;
+        }
+
+        return self.helloViewController;
     }
 
 

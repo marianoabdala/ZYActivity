@@ -15,6 +15,7 @@
 		313163D1167418C600BDCB67 /* silent-activity-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 313163CF167418C600BDCB67 /* silent-activity-ipad.png */; };
 		313163D41674195800BDCB67 /* activity-ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 313163D21674195800BDCB67 /* activity-ipad@2x.png */; };
 		313163D51674195800BDCB67 /* activity-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 313163D31674195800BDCB67 /* activity-ipad.png */; };
+		3171E8FE1674B5D200BF2FAC /* MainStoryboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3171E9001674B5D200BF2FAC /* MainStoryboard-iPad.storyboard */; };
 		31A47817166D8F1D00BF5AD9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A47816166D8F1D00BF5AD9 /* UIKit.framework */; };
 		31A47819166D8F1D00BF5AD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A47818166D8F1D00BF5AD9 /* Foundation.framework */; };
 		31A4781B166D8F1D00BF5AD9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31A4781A166D8F1D00BF5AD9 /* CoreGraphics.framework */; };
@@ -42,6 +43,7 @@
 		313163CF167418C600BDCB67 /* silent-activity-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "silent-activity-ipad.png"; sourceTree = "<group>"; };
 		313163D21674195800BDCB67 /* activity-ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity-ipad@2x.png"; sourceTree = "<group>"; };
 		313163D31674195800BDCB67 /* activity-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity-ipad.png"; sourceTree = "<group>"; };
+		3171E8FF1674B5D200BF2FAC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/MainStoryboard-iPad.storyboard"; sourceTree = "<group>"; };
 		31A47812166D8F1D00BF5AD9 /* SampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A47816166D8F1D00BF5AD9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		31A47818166D8F1D00BF5AD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -119,6 +121,7 @@
 				31A47825166D8F1D00BF5AD9 /* ZYAppDelegate.h */,
 				31A47826166D8F1D00BF5AD9 /* ZYAppDelegate.m */,
 				31A4782E166D8F1D00BF5AD9 /* MainStoryboard.storyboard */,
+				3171E9001674B5D200BF2FAC /* MainStoryboard-iPad.storyboard */,
 				31A47831166D8F1D00BF5AD9 /* ZYViewController.h */,
 				31A47832166D8F1D00BF5AD9 /* ZYViewController.m */,
 			);
@@ -244,6 +247,7 @@
 				313163D1167418C600BDCB67 /* silent-activity-ipad.png in Resources */,
 				313163D41674195800BDCB67 /* activity-ipad@2x.png in Resources */,
 				313163D51674195800BDCB67 /* activity-ipad.png in Resources */,
+				3171E8FE1674B5D200BF2FAC /* MainStoryboard-iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +271,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3171E9001674B5D200BF2FAC /* MainStoryboard-iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3171E8FF1674B5D200BF2FAC /* en */,
+			);
+			name = "MainStoryboard-iPad.storyboard";
+			sourceTree = "<group>";
+		};
 		31A4781F166D8F1D00BF5AD9 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,7 +353,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleProject/SampleProject-Prefix.pch";
 				INFOPLIST_FILE = "SampleProject/SampleProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -352,7 +366,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleProject/SampleProject-Prefix.pch";
 				INFOPLIST_FILE = "SampleProject/SampleProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

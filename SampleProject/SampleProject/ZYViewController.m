@@ -12,6 +12,9 @@
 
 @interface ZYViewController ()
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *goButton;
+@property (strong, nonatomic) UIPopoverController *popover;
+
 - (IBAction)goButtonTapped:(id)sender;
 
 @end
@@ -46,9 +49,24 @@
         UIActivityTypeSaveToCameraRoll
     ];
     
-    [self presentViewController:activityViewController
-                       animated:YES
-                     completion:nil];
+    BOOL isRunningOniPhone =
+    UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone;
+    
+    if (isRunningOniPhone == YES) {
+
+        [self presentViewController:activityViewController
+                           animated:YES
+                         completion:nil];
+        
+    } else { //isRunnningOniPad
+        
+        self.popover =
+        [[UIPopoverController alloc] initWithContentViewController:activityViewController];
+        
+        [self.popover presentPopoverFromBarButtonItem:self.goButton
+                             permittedArrowDirections:UIPopoverArrowDirectionAny
+                                             animated:YES];
+    }
 }
 
 @end

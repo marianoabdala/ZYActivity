@@ -42,7 +42,7 @@
         
         NSLog(@"My activity has begun!", nil);
         
-        sleep(5);
+        sleep(3);
         
         NSLog(@"My activity has ended!", nil);
         
