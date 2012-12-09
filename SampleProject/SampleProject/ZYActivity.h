@@ -5,6 +5,8 @@
 //  Created by Mariano Abdala on 12/3/12.
 //  Copyright (c) 2012 zerously. All rights reserved.
 //
+//  https://github.com/marianoabdala/ZYActivity
+//
 
 #import <UIKit/UIKit.h>
 
