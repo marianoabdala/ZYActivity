@@ -1,6 +1,6 @@
 //
 //  ZYNiceActivity.m
-//  SampleProject
+//  ZYActivity
 //
 //  Created by Mariano Abdala on 12/3/12.
 //  Copyright (c) 2012 zerously. All rights reserved.
@@ -11,6 +11,9 @@
 @interface ZYActivity ()
 
 @property (copy, nonatomic) NSArray *activityItems;
+@property (strong, nonatomic) UIViewController *viewController;
+
+@property (assign, nonatomic, getter = isSilent) BOOL silent;
 
 @end
 
@@ -41,8 +44,17 @@
 
 - (UIViewController *)activityViewController {
 
-    return
-    [self performWithActivityItems:self.activityItems];
+    if (self.isSilent == NO &&
+        self.viewController == nil) {
+
+        self.viewController =
+        [self performWithActivityItems:self.activityItems];
+
+        self.silent =
+        self.viewController == nil;
+    }
+    
+    return self.viewController;
 }
 
 #pragma mark - Self
