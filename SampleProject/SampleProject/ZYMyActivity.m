@@ -15,15 +15,15 @@
 #pragma mark UIActivity
 - (NSString *)activityTitle {
     
-    return NSLocalizedString(@"My activity", @"");
+    return NSLocalizedString(@"Activity", @"");
 }
 
 - (UIImage *)activityImage {
     
     UIImage *activityImage =
     UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ?
-    [UIImage imageNamed:@"instapaper"] :
-    [UIImage imageNamed:@"instapaper-ipad"];
+    [UIImage imageNamed:@"activity"] :
+    [UIImage imageNamed:@"activity-ipad"];
     
     return activityImage;
 }

@@ -14,15 +14,15 @@
 #pragma mark UIActivity
 - (NSString *)activityTitle {
     
-    return NSLocalizedString(@"My silent activity", @"");
+    return NSLocalizedString(@"Silent Activity", @"");
 }
 
 - (UIImage *)activityImage {
     
     UIImage *activityImage =
     UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ?
-    [UIImage imageNamed:@"instapaper"] :
-    [UIImage imageNamed:@"instapaper-ipad"];
+    [UIImage imageNamed:@"silent-activity"] :
+    [UIImage imageNamed:@"silent-activity-ipad"];
     
     return activityImage;
 }
@@ -44,7 +44,7 @@
         
         sleep(5);
         
-        NSLog(@"My activity has finished!", nil);
+        NSLog(@"My activity has ended!", nil);
         
         [self activityDidFinish:YES];
     }];
