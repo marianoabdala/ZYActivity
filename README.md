@@ -58,16 +58,13 @@ So now, only the following need to be overrided:
 
     - (UIViewController *)performWithActivityItems:(NSArray *)activityItems {
     
-        if (self.helloViewController == nil) {
+        ZYHelloViewController *helloViewController =
+        [[ZYHelloViewController alloc] initWithNibName:@"ZYHelloViewController"
+                                                bundle:nil];
         
-            self.helloViewController =
-            [[ZYHelloViewController alloc] initWithNibName:@"ZYHelloViewController"
-                                                    bundle:nil];
-        
-            self.helloViewController.activity = self;
-        }
+        helloViewController.activity = self;
 
-        return self.helloViewController;
+        return helloViewController;
     }
 
 

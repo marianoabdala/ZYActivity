@@ -9,12 +9,6 @@
 #import "ZYMyActivity.h"
 #import "ZYHelloViewController.h"
 
-@interface ZYMyActivity ()
-
-@property (strong, nonatomic) ZYHelloViewController *helloViewController;
-
-@end
-
 @implementation ZYMyActivity
 
 #pragma mark - Hierarchy
@@ -42,16 +36,13 @@
 #pragma mark ZYActivity
 - (UIViewController *)performWithActivityItems:(NSArray *)activityItems {
 
-    if (self.helloViewController == nil) {
+    ZYHelloViewController *helloViewController =
+    [[ZYHelloViewController alloc] initWithNibName:@"ZYHelloViewController"
+                                            bundle:nil];
         
-        self.helloViewController =
-        [[ZYHelloViewController alloc] initWithNibName:@"ZYHelloViewController"
-                                                bundle:nil];
-        
-        self.helloViewController.activity = self;
-    }
+    helloViewController.activity = self;
 
-    return self.helloViewController;
+    return helloViewController;
 }
 
 

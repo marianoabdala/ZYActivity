@@ -11,6 +11,8 @@
 @interface ZYActivity ()
 
 @property (copy, nonatomic) NSArray *activityItems;
+@property (strong, nonatomic) UIViewController *viewController;
+
 @property (assign, nonatomic, getter = isSilent) BOOL silent;
 
 @end
@@ -42,18 +44,17 @@
 
 - (UIViewController *)activityViewController {
 
-    UIViewController *activityViewController = nil;
-    
-    if (self.isSilent == NO) {
+    if (self.isSilent == NO &&
+        self.viewController == nil) {
 
-        activityViewController =
+        self.viewController =
         [self performWithActivityItems:self.activityItems];
 
         self.silent =
-        activityViewController == nil;
+        self.viewController == nil;
     }
     
-    return activityViewController;
+    return self.viewController;
 }
 
 #pragma mark - Self
