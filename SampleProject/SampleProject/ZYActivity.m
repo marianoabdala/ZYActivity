@@ -1,6 +1,6 @@
 //
 //  ZYNiceActivity.m
-//  SampleProject
+//  ZYActivity
 //
 //  Created by Mariano Abdala on 12/3/12.
 //  Copyright (c) 2012 zerously. All rights reserved.
