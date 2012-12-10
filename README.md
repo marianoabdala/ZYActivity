@@ -24,7 +24,7 @@ Extending the UIActivity isn't the most convenient way. By inheriting from this 
 
 If you don't want to show a UIViewController, you can simply return nil on performWithActivityItems:.
 
-So now, only the following need to be overrided:
+So now, only the following need to be overridden:
 
     - (NSString *)activityTitle;
     - (UIImage *)activityImage;
