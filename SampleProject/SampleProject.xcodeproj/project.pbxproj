@@ -30,8 +30,8 @@
 		31A47851166D903400BF5AD9 /* ZYHelloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A4784F166D8FCE00BF5AD9 /* ZYHelloViewController.m */; };
 		31A47852166D903800BF5AD9 /* ZYMyActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A47840166D8F5800BF5AD9 /* ZYMyActivity.m */; };
 		31A47853166D903C00BF5AD9 /* ZYMySilentActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A47842166D8F5800BF5AD9 /* ZYMySilentActivity.m */; };
-		31A47854166D903F00BF5AD9 /* ZYActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A47844166D8F5800BF5AD9 /* ZYActivity.m */; };
 		31A47855166D90F100BF5AD9 /* ZYHelloViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A47850166D8FCE00BF5AD9 /* ZYHelloViewController.xib */; };
+		31BD1AEC167638300042CD3A /* ZYActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BD1AEB167638300042CD3A /* ZYActivity.m */; };
 		31DDB4491674C0C900EEA767 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DDB4481674C0C900EEA767 /* icon.png */; };
 		31DDB44C1674C0CD00EEA767 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DDB44B1674C0CD00EEA767 /* icon@2x.png */; };
 		31DDB44E1674C16D00EEA767 /* icon-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DDB44D1674C16D00EEA767 /* icon-ipad.png */; };
@@ -68,11 +68,11 @@
 		31A47840166D8F5800BF5AD9 /* ZYMyActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYMyActivity.m; sourceTree = "<group>"; };
 		31A47841166D8F5800BF5AD9 /* ZYMySilentActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYMySilentActivity.h; sourceTree = "<group>"; };
 		31A47842166D8F5800BF5AD9 /* ZYMySilentActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYMySilentActivity.m; sourceTree = "<group>"; };
-		31A47843166D8F5800BF5AD9 /* ZYActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYActivity.h; sourceTree = "<group>"; };
-		31A47844166D8F5800BF5AD9 /* ZYActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYActivity.m; sourceTree = "<group>"; };
 		31A4784E166D8FCE00BF5AD9 /* ZYHelloViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYHelloViewController.h; sourceTree = "<group>"; };
 		31A4784F166D8FCE00BF5AD9 /* ZYHelloViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYHelloViewController.m; sourceTree = "<group>"; };
 		31A47850166D8FCE00BF5AD9 /* ZYHelloViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZYHelloViewController.xib; sourceTree = "<group>"; };
+		31BD1AEA167638300042CD3A /* ZYActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYActivity.h; sourceTree = "<group>"; };
+		31BD1AEB167638300042CD3A /* ZYActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYActivity.m; sourceTree = "<group>"; };
 		31DDB4481674C0C900EEA767 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		31DDB44B1674C0CD00EEA767 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
 		31DDB44D1674C16D00EEA767 /* icon-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-ipad.png"; path = "../icon-ipad.png"; sourceTree = "<group>"; };
@@ -126,6 +126,7 @@
 				31A4783E166D8F4300BF5AD9 /* Activities */,
 				31A4783D166D8F3E00BF5AD9 /* Images */,
 				31A4781D166D8F1D00BF5AD9 /* Supporting Files */,
+				31BD1AE9167638300042CD3A /* ZYActivity */,
 				31A4782E166D8F1D00BF5AD9 /* MainStoryboard.storyboard */,
 				3171E9001674B5D200BF2FAC /* MainStoryboard-iPad.storyboard */,
 				31A47825166D8F1D00BF5AD9 /* ZYAppDelegate.h */,
@@ -177,8 +178,6 @@
 				31A47840166D8F5800BF5AD9 /* ZYMyActivity.m */,
 				31A47841166D8F5800BF5AD9 /* ZYMySilentActivity.h */,
 				31A47842166D8F5800BF5AD9 /* ZYMySilentActivity.m */,
-				31A47843166D8F5800BF5AD9 /* ZYActivity.h */,
-				31A47844166D8F5800BF5AD9 /* ZYActivity.m */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -191,6 +190,16 @@
 				31A47850166D8FCE00BF5AD9 /* ZYHelloViewController.xib */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		31BD1AE9167638300042CD3A /* ZYActivity */ = {
+			isa = PBXGroup;
+			children = (
+				31BD1AEA167638300042CD3A /* ZYActivity.h */,
+				31BD1AEB167638300042CD3A /* ZYActivity.m */,
+			);
+			name = ZYActivity;
+			path = ../../ZYActivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,13 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31A47854166D903F00BF5AD9 /* ZYActivity.m in Sources */,
 				31A47853166D903C00BF5AD9 /* ZYMySilentActivity.m in Sources */,
 				31A47852166D903800BF5AD9 /* ZYMyActivity.m in Sources */,
 				31A47851166D903400BF5AD9 /* ZYHelloViewController.m in Sources */,
 				31A47823166D8F1D00BF5AD9 /* main.m in Sources */,
 				31A47827166D8F1D00BF5AD9 /* ZYAppDelegate.m in Sources */,
 				31A47833166D8F1D00BF5AD9 /* ZYViewController.m in Sources */,
+				31BD1AEC167638300042CD3A /* ZYActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
