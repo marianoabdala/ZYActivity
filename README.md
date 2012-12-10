@@ -20,7 +20,7 @@ Plus one and just one of the following:
   
 **Extending the ZYActivity**
 
-Extending the UIActivity isn't the most convenient way. By inheriting from this class you'll find that activityType is taken care of and that the storing of the activity items and the execution of the action happens in one step, so instead of prepareWithActivityItems:, performActivity and activityViewController you now only have performWithActivityItems:.
+Extending the UIActivity isn't the most convenient way. By inheriting from this class you'll find that activityType is taken care of and that the storing of the activity items and the execution of the action happens in one step, so instead of prepareWithActivityItems:, performActivity and activityViewController you now only have to override performWithActivityItems:.
 
 If you don't want to show a UIViewController, you can simply return nil on performWithActivityItems:.
 
