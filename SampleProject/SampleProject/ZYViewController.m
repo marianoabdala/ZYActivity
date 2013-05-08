@@ -60,8 +60,11 @@
         
     } else { //isRunnningOniPad
         
-        self.popover =
-        [[UIPopoverController alloc] initWithContentViewController:activityViewController];
+        if (self.popover == nil) {
+            
+            self.popover =
+            [[UIPopoverController alloc] initWithContentViewController:activityViewController];
+        }
         
         [self.popover presentPopoverFromBarButtonItem:self.goButton
                              permittedArrowDirections:UIPopoverArrowDirectionAny
